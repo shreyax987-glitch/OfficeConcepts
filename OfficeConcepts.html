@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Office Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Poppins',sans-serif;margin:0;background:#6B8E23}
+header{background:#556B2F;color:white;padding:25px;text-align:center}
+header h1{margin:0;font-size:36px}
+header p{margin-top:5px;font-weight:300}
+
+nav{background:#6B8E23;text-align:center;padding:12px;border-top:2px solid white;border-bottom:2px solid white}
+nav a{color:white;margin:0 18px;text-decoration:none;font-weight:600;font-size:16px}
+nav a:hover{opacity:0.8}
+
+.hero{
+background:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2') center/cover no-repeat;
+height:420px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center
+}
+.hero h2{font-size:40px;margin-bottom:10px;background:rgba(0,0,0,0.4);padding:10px 20px;border-radius:6px}
+.hero p{font-size:18px;background:rgba(0,0,0,0.4);padding:8px 15px;border-radius:6px}
+
+.container{padding:40px}
+.page{display:none;background:white;padding:40px;border-radius:8px;margin:25px auto;max-width:1100px}
+
+.section-title{text-align:center;margin-bottom:25px}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.gallery img{width:100%;border-radius:10px;transition:transform .3s, box-shadow .3s}
+.gallery img:hover{transform:scale(1.05);box-shadow:0 10px 20px rgba(0,0,0,0.25)}
+
+.clients{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;text-align:center}
+.client-card{padding:20px;border:1px solid #ddd;border-radius:8px;background:#fafafa}
+
+.testimonials{margin-top:30px}
+.testimonial{background:#f7f7f7;padding:20px;border-left:5px solid #6B8E23;margin-bottom:15px;border-radius:6px}
+
+.contact-box{text-align:center;line-height:1.8}
+
+footer{background:#556B2F;color:white;text-align:center;padding:20px;margin-top:40px}
+
+button{
+background:#6B8E23;
+border:none;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+font-size:16px;
+cursor:pointer
+}
+button:hover{background:#556B2F}
+</style>
+
+<script>
+function showPage(page){
+ document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+ document.getElementById(page).style.display='block';
+ window.scrollTo(0,0);
+}
+</script>
+</head>
+
+<body onload="showPage('home')">
+
+<header>
+<h1>Office Concepts</h1>
+<p>Professional Interior Design for Offices, Schools & Commercial Spaces</p>
+</header>
+
+<nav>
+<a href="#" onclick="showPage('home')">Home</a>
+<a href="#" onclick="showPage('about')">About Us</a>
+<a href="#" onclick="showPage('gallery')">Gallery</a>
+<a href="#" onclick="showPage('customers')">Our Customers</a>
+<a href="#" onclick="showPage('contact')">Contact Us</a>
+</nav>
+
+<div class="hero">
+<h2>Transforming Workspaces</h2>
+<p>Modern office and educational interiors designed for productivity and creativity</p>
+<button onclick="showPage('contact')">Start Your Project</button>
+</div>
+
+<div class="container">
+
+<section id="home" class="page">
+<h2 class="section-title">Welcome to Office Concepts</h2>
+<p>Office Concepts specializes in creating modern, efficient, and inspiring interior environments. Our design team focuses on offices, schools, and commercial shopping complexes where design plays a key role in productivity, collaboration, and customer experience.</p>
+<p>From concept to completion, we deliver spaces that combine style, functionality, and smart spatial planning.</p>
+</section>
+
+<section id="about" class="page">
+<h2 class="section-title">About Us</h2>
+<p>Office Concepts is an interior design company dedicated to designing professional and educational environments. Our team of experienced designers focuses on creating spaces that are modern, functional, and inspiring.</p>
+<p>We work closely with corporate clients, educational institutions, and commercial developers to deliver high-quality interior solutions that improve user experience and space efficiency.</p>
+
+<div class="testimonials">
+<h3>Client Testimonials</h3>
+<div class="testimonial">"Office Concepts redesigned our corporate workspace beautifully. Productivity improved significantly." – TechNova</div>
+<div class="testimonial">"The classroom interiors are vibrant and inspiring for students." – Greenfield International School</div>
+</div>
+</section>
+
+<section id="gallery" class="page">
+<h2 class="section-title">Interior Design Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+<img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<img src="https://images.unsplash.com/photo-1507209696998-3c532be9b2b5">
+</div>
+</section>
+
+<section id="customers" class="page">
+<h2 class="section-title">Our Customers</h2>
+<div class="clients">
+<div class="client-card">TechNova Corporate Offices</div>
+<div class="client-card">Greenfield International School</div>
+<div class="client-card">City Square Shopping Complex</div>
+<div class="client-card">Bright Future Learning Academy</div>
+<div class="client-card">Global Business Hub</div>
+<div class="client-card">Metro Commercial Plaza</div>
+</div>
+</section>
+
+<section id="contact" class="page">
+<h2 class="section-title">Contact Us</h2>
+<div class="contact-box">
+<p>Email: contact@officeconcepts.com</p>
+<p>Phone: +65 1234 5678</p>
+<p>Address: 100 Business Avenue, Design District</p>
+<p>Reach out to discuss your next interior design project.</p>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 Office Concepts | Interior Design Studio</p>
+</footer>
+
+</body>
+</html>
