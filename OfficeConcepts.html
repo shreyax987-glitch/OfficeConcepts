@@ -63,7 +63,17 @@ button:hover{background:#556B2F}
 function showPage(page){
  document.querySelectorAll('.page').forEach(p=>p.style.display='none');
  document.getElementById(page).style.display='block';
- window.scrollTo(0,0);
+
+ // hide hero banner when navigating to other pages
+ const hero = document.querySelector('.hero');
+ if(page === 'home'){
+   hero.style.display = 'flex';
+ } else {
+   hero.style.display = 'none';
+ }
+
+ // scroll to the visible page
+ document.getElementById(page).scrollIntoView({behavior:'smooth'});
 }
 </script>
 </head>
